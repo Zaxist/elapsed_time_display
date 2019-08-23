@@ -1,8 +1,8 @@
 name: timer_text
-description: A new Flutter package project.
+description: A self updating timer text display widget. Takes a DateTime object, and an optional TextStyle object.
 version: 0.0.1
-author:
-homepage:
+author: Zac Turner<zaxistturner@gmail.com>
+homepage: https://github.com/Zaxist/timer_text.git
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
