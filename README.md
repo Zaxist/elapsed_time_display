@@ -5,7 +5,7 @@ A self updating Timer Text widget for flutter.
 include in your pubspec yaml file like 
 ```timer_text:
     git:
-        url: 'https://github.com/Zaxist/timer_text.git'```
+        url: https://github.com/Zaxist/timer_text.git```
       
 then import 
 `import 'package:timer_text/timer_text.dart';`
