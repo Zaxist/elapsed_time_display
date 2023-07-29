@@ -1,0 +1,25 @@
+name: Test
+
+on: [push]
+
+jobs:
+  Test:
+    name: Test Node.js ${{ matrix.node }} on ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        channel: ["stable", "beta"]
+        flutter-version: ["3.0.0", "3.x"]
+        os: [ubuntu-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ matrix.flutter-version }}
+          channel: ${{ matrix.channel }}
+      - run: flutter --version
+      - run: flutter pub get
+      - run: flutter test
