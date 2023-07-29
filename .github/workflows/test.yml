@@ -1,0 +1,23 @@
+name: Test
+
+on: [push]
+
+jobs:
+  Test:
+    name: Test Widget on Flutter ${{ matrix.channel }} channel on ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        channel: ["stable", "beta"]
+        os: [ubuntu-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: ${{ matrix.channel }}
+      - run: flutter --version
+      - run: flutter pub get
+      - run: flutter test

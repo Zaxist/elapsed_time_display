@@ -1,11 +1,10 @@
-name: timer_text
-description: A self updating timer text display widget. Takes a DateTime object, and an optional TextStyle object.
+name: elapsed_time_display
+description: A self updating elapsed time text display widget.
 version: 0.0.1
-author: Zac Turner<zaxistturner@gmail.com>
 homepage: https://github.com/Zaxist/timer_text.git
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=3.0.0 <=4.0.0"
 
 dependencies:
   flutter:
