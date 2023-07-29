@@ -3,6 +3,8 @@
 ### Changed
 
 - Name from 'timer_text`to `elapsed_time_display`
+- `TimerText` class to `ElapsedTimeDisplay`
+- `timerTextStyle` prop to `style`
 
 ### Fixed
 

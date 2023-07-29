@@ -3,31 +3,31 @@ library elapsed_time_display;
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-class TimerText extends StatefulWidget {
-  TimerText({
+class ElapsedTimeDisplay extends StatefulWidget {
+  ElapsedTimeDisplay({
     super.key,
     required this.startTime,
-    this.timerTextStyle,
+    this.style,
     this.immediateRebuildOnUpdate = false,
     this.interval = const Duration(seconds: 1),
     this.formatter,
   });
 
   final DateTime startTime;
-  final TextStyle? timerTextStyle;
+  final TextStyle? style;
 
   /// Controls whether the next rebuild will happen instantly when `startTime` changes. If not set to `true` then the Timer will not rebuild until the next scheduled tick (every 1 second by default), even when `startTime` has changed.
   final bool immediateRebuildOnUpdate;
   final Duration interval;
   final String Function(ElapsedTime elapsedTime)? formatter;
-  TimerTextState createState() => new TimerTextState();
+  ElapsedTimeDisplayState createState() => new ElapsedTimeDisplayState();
 }
 
-class TimerTextState extends State<TimerText> {
+class ElapsedTimeDisplayState extends State<ElapsedTimeDisplay> {
   late Timer timer;
   int elapsedMilliseconds = 0;
 
-  TimerTextState();
+  ElapsedTimeDisplayState();
 
   @override
   void initState() {
@@ -38,7 +38,7 @@ class TimerTextState extends State<TimerText> {
   }
 
   @override
-  void didUpdateWidget(covariant TimerText oldWidget) {
+  void didUpdateWidget(covariant ElapsedTimeDisplay oldWidget) {
     // Trigger rebuild immediately when startTime changes
     if (widget.immediateRebuildOnUpdate &&
         oldWidget.startTime != widget.startTime) {
@@ -84,7 +84,7 @@ class TimerTextState extends State<TimerText> {
 
   @override
   Widget build(BuildContext context) {
-    return new Text(formatted, style: widget.timerTextStyle);
+    return new Text(formatted, style: widget.style);
   }
 
   @override
