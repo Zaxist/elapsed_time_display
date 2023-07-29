@@ -1,7 +1,7 @@
 name: elapsed_time_display
 description: A self updating elapsed time text display widget.
 version: 0.0.1
-homepage: https://github.com/Zaxist/timer_text.git
+homepage: https://github.com/Zaxist/elapsed_time_display.git
 
 environment:
   sdk: ">=3.0.0 <=4.0.0"

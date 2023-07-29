@@ -1,4 +1,4 @@
-# timer_text
+# elapsed_time_display
 
 A self updating Elapsed time display widget for flutter.
 
@@ -9,7 +9,7 @@ include in your pubspec yaml file:
 ```yml
 elapsed_time_display:
   git:
-    url: https://github.com/Zaxist/timer_text.git
+    url: https://github.com/Zaxist/elapsed_time_display.git
 ```
 
 then import like so:
