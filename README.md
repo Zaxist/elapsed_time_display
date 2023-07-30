@@ -13,7 +13,7 @@ dependencies:
       url: https://github.com/Zaxist/elapsed_time_display.git
 ```
 
-1. Run `flutter pub get`
+2. Run `flutter pub get`
 
 ## Usage
 
