@@ -32,7 +32,7 @@ DateTime startTime = DateTime.now();
 Widget build(BuildContext context) {
   return Center(
     child: ElapsedTimeDisplay(
-      startTime: DateTime.now(),
+      startTime: startTime,
     ),
   );
 }
