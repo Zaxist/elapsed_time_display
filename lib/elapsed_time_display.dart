@@ -13,12 +13,19 @@ class ElapsedTimeDisplay extends StatefulWidget {
     this.formatter,
   });
 
+  /// The point in time from which the timer will count.
   final DateTime startTime;
+
+  /// A TextStyle object to style the timer display.
   final TextStyle? style;
 
   /// Controls whether the next rebuild will happen instantly when `startTime` changes. If not set to `true` then the Timer will not rebuild until the next scheduled tick (every 1 second by default), even when `startTime` has changed.
   final bool immediateRebuildOnUpdate;
+
+  /// A duration object to set the interval at which the widget will re-evaluate how much time has elapsed, causing a rebuild. This will default to 1 second.
   final Duration interval;
+
+  /// A callback function that can be used to format the Elapsed time. It is passed an instance of the `ElapsedTime` class (which has properties: `hours`, `minutes`, `seconds`, `milliseconds`), and must return a `String`. If nothing is passed, the format will default to: `HH:MM:SS`.
   final String Function(ElapsedTime elapsedTime)? formatter;
   ElapsedTimeDisplayState createState() => new ElapsedTimeDisplayState();
 }
@@ -83,7 +90,7 @@ class ElapsedTimeDisplayState extends State<ElapsedTimeDisplay> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Text build(BuildContext context) {
     return new Text(formatted, style: widget.style);
   }
 
