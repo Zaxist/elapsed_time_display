@@ -8,9 +8,7 @@ A self updating Elapsed time display widget for flutter.
 
 ```yml
 dependencies:
-  elapsed_time_display:
-    git:
-      url: https://github.com/Zaxist/elapsed_time_display.git
+  elapsed_time_display: ^x.x.x
 ```
 
 2. Run `flutter pub get`
