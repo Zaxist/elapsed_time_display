@@ -1,10 +1,13 @@
 name: elapsed_time_display
 description: A self updating elapsed time text display widget.
-version: 0.0.1
-homepage: https://github.com/Zaxist/elapsed_time_display.git
+version: 1.0.0-beta.1
+homepage: https://github.com/Zaxist/elapsed_time_display
+repository: https://github.com/Zaxist/elapsed_time_display
+documentation: https://github.com/Zaxist/elapsed_time_display/blob/master/README.md
+issue_tracker: https://github.com/Zaxist/elapsed_time_display/issues
 
 environment:
-  sdk: ">=3.0.0 <=4.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
