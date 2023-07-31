@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [1.0.0] - 2023-07-31
+
 ### Changed
 
 - Name from 'timer_text`to `elapsed_time_display`
